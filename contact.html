@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/logo.webp" type="image" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "1QIUJH6KEciA25QvB",
+        });
+      })();
+    </script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <!-- Burger Icon -->
+        <li class="icon">
+          <a href="javascript:void(0);" onclick="navFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+
+        <!-- Navbar Links -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <a class="dropbtn">Social Media <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="https://www.instagram.com/rul.fms/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://x.com/uwulvsky" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.youtube.com/@fakhrulmudzakkirshiddiq" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+          </div>
+        </li>
+      </ul>
+      <button class="toggle-dark" onclick="toggleDarkMode()">
+        <img id="darkIcon" src="image/dark.png" alt="Dark Mode" style="width: 24px; height: 24px" />
+      </button>
+    </nav>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2><u>Hubungi Saya</u></h2>
+      <form id="emailForm" onsubmit="sendMail(event)">
+        <input type="text" id="name" placeholder="Nama Anda" required />
+        <input type="email" id="email" placeholder="Email Anda" required />
+        <textarea id="message" placeholder="Pesan Anda" required></textarea>
+        <button type="submit">Kirim Email</button>
+      </form>
+    </section>
+    <footer>
+      ©2025 Fakhrul Mudzakkir Shiddiq —
+      <span id="waktu"></span>
+    </footer>
+  </body>
+</html>
